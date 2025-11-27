@@ -91,16 +91,27 @@ onMounted(() => {
   opacity: 1;
   transform: translate(-50%, -50%);
 }
-a, button, input[type="text"], textarea {
+
+@media only screen and (max-width: 768px) {
+  .custom-cursor {
+    display: none;
+  }
+}
+
+a,
+button,
+input[type="text"],
+textarea {
   cursor: pointer !important;
 }
-button, span {
-    user-select: text;
+button,
+span {
+  user-select: text;
 }
 
 body.hide-custom-cursor .custom-cursor {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
 }
 </style>
