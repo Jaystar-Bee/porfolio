@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+  /* SCREENS */
+  --breakpoint-xxs: 360px;
+  --breakpoint-xsm: 375px;
+  --breakpoint-xs: 450px;
+
+  --font-sans: "Montserrat", sans-serif;
+
+  --color-primary-50: #e6f5f7;
+  --color-primary-100: #ccecec;
+  --color-primary-200: #99d9e0;
+  --color-primary-300: #66c5d4;
+  --color-primary-400: #33b2c8;
+  --color-primary-500: #007b8a;
+  --color-primary-600: #006b7a;
+  --color-primary-700: #005a68;
+  --color-primary-800: #004a56;
+  --color-primary-900: #003740;
+  --color-primary-950: #001f24;
+}
+:root {
+  --primary-color: var(--color-primary-500);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px) scale(0.98);
+  filter: blur(6px);
+  transition: opacity 0.7s ease, transform 0.7s ease, filter 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
