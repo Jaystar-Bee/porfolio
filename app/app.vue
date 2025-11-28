@@ -16,6 +16,7 @@ useSeoMeta({
   ogTitle: title,
   ogDescription: description,
   ogImage: '/logos/logo-color.png',
+  // twitterImage: '',
   twitterCard: 'summary_large_image'
 })
 
